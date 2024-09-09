@@ -1,3 +1,25 @@
+/* ESTILO EXPERIENCIA */
+
+:root {
+  --font-color-h2: #e0e0e0;
+  --font-color-p: #525252;
+  --font-color-strong: #141414;
+  --fundo-color: #f5f5f5;
+  --fundo-color-li: #ffffff;
+}
+
+@media(prefers-color-scheme: dark) { /*config dark */
+  :root {
+    --font-color-h2: #efefef;
+    --font-color-p: #c2c2c2;
+    --font-color-strong: #ffffff;
+    --fundo-color: #ffffff;
+    --fundo-color-li: #525252;
+    --font-color-li: #ffffff;
+    --font-color-empresa: #141414;
+  }
+}
+
 .experiencia {
   max-width: 1200px;
   padding: 40px 20px;
@@ -8,7 +30,7 @@
 
 
   & .subtitulo {
-    color: #e0e0e0;
+    color: var(--font-color-h2);
   }
 
 
@@ -17,10 +39,10 @@
     line-height: 1.33;
     max-width: 40ch;
     margin-bottom: 60px;
-    color: #525252;
+    color: var(--font-color-p);
 
     & strong {
-      color: #141414;
+      color: var(--font-color-strong);
     }
   }
 
@@ -30,7 +52,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 10px 20px;
     padding: 20px;
-    background: #f5f5f5;
+    background: var(--fundo-color);
     margin-bottom: 20px;
     border-radius: 4px;
     position: relative;
@@ -53,7 +75,7 @@
     left: -100px;
     text-align: right;
     width: 80px;
-    color: #525252;
+    color: var(--font-color-p);
     font-size: 0.875rem;
   }
 
@@ -66,7 +88,7 @@
   & .empresa_texto {
     font-size: 0.875rem;
     line-height: 1.4;
-    color: #525252;
+    color: var(--font-color-empresa);
   }
 
   .empresa_habilidades {
@@ -74,13 +96,14 @@
     flex-wrap: wrap;
     gap: 10px;
     align-content: start;
+    color: var(--font-color-li);
 
 
     & li {
       font-size: 0.875rem;
       line-height: 1.4;
       border-radius: 4px;
-      background: #ffff;
+      background: var(--fundo-color-li);
       padding: 5px 10px;
     }
   }
@@ -92,12 +115,15 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .experiencia .subtitulo {
-    color: #141414;
+    color: var(--font-color-strong);
   }
+
   .experiencia .experiencia_texto {
     font-size: 1.25rem;
   }
+
   .experiencia .empresa_ano {
     position: initial;
     order: 1;

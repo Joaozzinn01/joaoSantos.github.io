@@ -1,5 +1,18 @@
 /* ESTILO INTRODUCAO */
 
+:root {
+  --font-color-h1: #141414;
+  --font-color-p: #525252;
+}
+
+
+@media(prefers-color-scheme: dark) { /*config dark */
+  :root {
+    --font-color-h1: #efefef;
+    --font-color-p: #c2c2c2;
+  }
+}
+
 .introducao {
   max-width: 1200px;
   padding: 80px 20px;
@@ -10,6 +23,7 @@
   align-items: center;
 
   & h1 {
+    color: var(--font-color-h1);
     font-size: 4.5rem;
     line-height: 1.125;
     margin-bottom: 30px;
@@ -30,7 +44,7 @@
 
   & p {
     font-size: 1.5rem;
-    color: #525252;
+    color: var(--font-color-p);
   }
 
 }
@@ -45,12 +59,15 @@
 
 @media (max-width: 630px) {
   .introducao {
+    margin-top: 80px;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
+
   .introducao h1 {
     font-size: 2rem;
   }
+
   .introducao h1::before {
     width: 30px;
     height: 10px;
@@ -62,6 +79,7 @@
   .introducao {
     grid-template-columns: 1fr;
   }
+
   .introducao img {
     display: none;
   }

@@ -1,9 +1,19 @@
 /* ESTILO PADRÃO */
 
+:root {
+  --fundo-primario: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) { /*config dark */
+  :root {
+    --fundo-primario: #141414;
+  }  
+}
+
 body {
   font-family: "Fira Sans";
   margin: 0;
-  color: #141414;
+  background: var(--fundo-primario);
 }
 
 
